@@ -36,6 +36,8 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
+const resultsDiv = document.getElementById('results');
+
 function playGame() {
     let humanScore = 0;
     let computerScore = 0;
@@ -51,19 +53,22 @@ function playGame() {
             computerScore++;
         }
 
-        console.log(roundResult);
-        console.log(`Current Score: Human ${humanScore} | Computer ${computerScore}`);
+        resultsDiv.textContent = `Round ${i + 1}: ${roundResult} | Current Score: Human ${humanScore} | Computer ${computerScore}`;
     }
 
     // Announce the winner
     if (humanScore > computerScore) {
-        console.log("You win the game!");
+        finalMessage = "You win the game!";
     } else if (computerScore > humanScore) {
-        console.log("The computer wins the game.");
+        finalMessage = "The computer wins the game.";
     } else {
-        console.log("The game is a tie!");
+        finalMessage = "The game is a tie!";
     }
+
+    resultsDiv.textContent += `\n\n${finalMessage}`;
 }
 
-// Start the game!
-playGame();
+function startGame() {
+    playGame();
+}
+

@@ -3,13 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock, Paper, Scissors Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="game-container">
     <h1>Rock, Paper, Scissors Game</h1>
     <div id="results"></div>
-    <button onclick="startGame()">Start Game</button>
+
+    <div class="choice-buttons">
+    <button id="rockBtn" onclick="playRound('rock')">Rock 🪨</button>
+    <button id="paperBtn" onclick="playRound('paper')">Paper 📜</button>
+    <button id="scissorsBtn" onclick="playRound('scissors')">Scissors ✂️</button>
+    </div>
+
+
+    <button onclick="restartGame()">Restart Game</button>
+    </div>
+
+
+
+
+    <footer>
+        <p>
+            © 2024 Ariff Zainal
+            <a href="https://github.com/ariffzainal" target="_blank">| GitHub</a>
+        </p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
+
 </html>
